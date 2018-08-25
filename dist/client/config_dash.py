@@ -36,6 +36,8 @@ LOG_FILENAME = os.path.join(LOG_FOLDER, 'DASH_RUNTIME_LOG')
 # PLAYBACK_LOG_FILENAME = os.path.join(LOG_FOLDER, strftime('DASH_PLAYBACK_LOG_%Y-%m-%d.%H_%M_%S.csv'))
 # Buffer logs created by dash_buffer.py
 BUFFER_LOG_FILENAME = os.path.join(LOG_FOLDER, strftime('DASH_BUFFER_LOG_%Y-%m-%d.%H_%M_%S.csv'))
+"""modification by Arslan to get QoE metrics"""
+QOE_LOG_FILENAME =os.path.join(LOG_FOLDER, strftime('QOE_LOG_%Y-%m-%d.%H_%M_%S.csv'))
 LOG_FILE_HANDLE = None
 # To be set by configure_log_file.py
 LOG = None
