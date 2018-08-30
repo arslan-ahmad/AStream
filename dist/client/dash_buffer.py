@@ -265,7 +265,7 @@ class DashPlayer:
             log_time = 0
         update_monitor={"EpochTime": str(log_time), "CurrentPlaybackTime": str(self.playback_timer.time()),
                     "CurrentBufferSize": str(self.buffer.qsize()), "CurrentPlaybackState": str(self.playback_state),
-                    "Action": str(self.Action_store), "Bitrate": str(self.Bitrates_store)}
+                    "Action": str(self.Action_store), "Bitrate": str(self.Bitrates_store), "SysTime": str(time.time())}
         post_monitor=self.dbqoefrequency.insert_one(update_monitor).inserted_id
         self.monitor = threading.Timer(self.frequency,self.monitoring_probe)
         self.monitor.start()
